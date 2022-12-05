@@ -25,6 +25,14 @@ export class LamphService {
     );
   }
 
+  obtenerActivosPorFecha(fecha_inicio_param: Date, fecha_fin_param: Date){
+    const url = `${this.baseUrl}/lamph/sensor`
+
+    console.log(fecha_inicio_param.getTime());
+    
+
+  }
+
 
 
 }

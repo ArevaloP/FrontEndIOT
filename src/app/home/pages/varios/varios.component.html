@@ -1,1 +1,71 @@
-<p>varios works!</p>
+<mat-grid-list cols="1" rowHeight="7em">
+    <mat-grid-tile colspan="1" rowspan="1" >
+        
+        <mat-form-field class="example-form-field" appearance="fill">
+            <mat-label>Rango de fechas</mat-label>
+            <mat-date-range-input class="range"
+              [formGroup]="range"
+              [rangePicker]="campaignOnePicker">
+              <input matStartDate placeholder="Inicio" formControlName="start">
+              <input matEndDate placeholder="Fin" (dateInput)="changeDate('input', $event)" formControlName="end">
+            </mat-date-range-input>
+            <mat-hint>MM/DD/AAAA – MM/DD/AAAA</mat-hint>
+            <mat-datepicker-toggle class="tigger" matIconSuffix [for]="campaignOnePicker"></mat-datepicker-toggle>
+            <mat-date-range-picker #campaignOnePicker></mat-date-range-picker>
+          </mat-form-field>
+        
+    </mat-grid-tile>
+</mat-grid-list> 
+
+<mat-grid-list cols="2" rowHeight="100px">
+    <mat-grid-tile class="grid-title"><h2>Grafica de Potencia(W)</h2></mat-grid-tile>
+    <mat-grid-tile class="grid-title"><h2>Grafica de Corriente(A)</h2></mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list cols="2" rowHeight="2:1" class="lis-grid">
+    <mat-grid-tile class="tile-gird">
+        <ngx-charts-pie-chart
+            [view]="view"
+            [scheme]="colorScheme"
+            [results]="singleCircle" 
+            [legend]="showLegend"
+            [legendPosition]="legendPosition"
+            [labels]="showLabels"
+            [doughnut]="isDoughnut"
+            (select)="onSelect($event)"
+            (activate)="onActivate($event)"
+            (deactivate)="onDeactivate($event)"
+        >
+        </ngx-charts-pie-chart>
+    </mat-grid-tile>
+
+
+    <mat-grid-tile class="tile-gird">
+        <ngx-charts-bar-vertical
+            [view]="view"
+            [scheme]="colorScheme"
+            [results]="singleBarras"
+            [gradient]="gradient"
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis"
+            [legend]="showLegend"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            xAxisLabel="Intervalos De Tiempo"
+            yAxisLabel="Corriente(A)"
+            (select)="onSelect($event)">
+        </ngx-charts-bar-vertical> 
+    </mat-grid-tile>
+
+    <mat-grid-tile class="tile-gird" colspan="2">
+        <ngx-charts-number-card
+            [view]="viewCard"
+            [scheme]="colorScheme"
+            [results]="singleCards"
+            [cardColor]="cardColor"
+            (select)="onSelect($event)">
+        </ngx-charts-number-card>
+    </mat-grid-tile>
+    
+</mat-grid-list>
+

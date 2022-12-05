@@ -15,6 +15,70 @@ export class InicioComponent implements OnInit {
     {
       "name": "Corriente",
       "series": [
+        {
+          "name": new Date('2022-11-21T18:01:00'),
+          "value": 750
+        },
+        {
+          "name": new Date('2022-11-21T22:01:00'),
+          "value": 225
+        },
+        {
+          "name": new Date('2022-11-21T22:13:00'),
+          "value": 750
+        },
+        {
+          "name": new Date('2022-11-21T22:17:00'),
+          "value": 225
+        },
+        {
+          "name": new Date('2022-11-21T22:34:00'),
+          "value": 750
+        },
+        {
+          "name": new Date('2022-11-21T22:36:00'),
+          "value": 225
+        },
+        {
+          "name": new Date('2022-11-21T22:56:00'),
+          "value": 750
+        },
+        {
+          "name": new Date('2022-11-21T22:59:00'),
+          "value": 225
+        },
+        {
+          "name": new Date('2022-11-21T23:21:00'),
+          "value": 750
+        },
+        {
+          "name": new Date('2022-11-21T23:31:00'),
+          "value": 225
+        },
+        {
+          "name": new Date('2022-11-22T00:34:00'),
+          "value": 750
+        },
+        {
+          "name": new Date('2022-11-22T00:36:00'),
+          "value": 225
+        },
+        {
+          "name": new Date('2022-11-22T02:34:00'),
+          "value": 750
+        },
+        {
+          "name": new Date('2022-11-22T02:35:00'),
+          "value": 225
+        },
+        {
+          "name": new Date('2022-11-22T06:01:00'),
+          "value": 750
+        },
+        {
+          "name": new Date('2022-11-22T06:01:00'),
+          "value": 0
+        },
       ]
     }
   ];
@@ -50,14 +114,14 @@ export class InicioComponent implements OnInit {
    }
 
   ngOnInit(): void {
-      this.lamphService.obtenerDatosAll()
+      /* this.lamphService.obtenerDatosAll()
       .subscribe(resp =>{
         let result = this.parseDate(resp.lamphs);
-        result = this.agregarDatos(result);
         console.log(result);
+        result = this.agregarDatos(result);
         this.multi[0].series = result;
         this.multi = [...this.multi];
-      })
+      }) */
   }
 
 

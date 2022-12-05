@@ -10,6 +10,7 @@ import { SharedModule } from '../shared/shared.module';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { VariosComponent } from './pages/varios/varios.component';
 import { MaterialModule } from '../material/material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,7 +24,9 @@ import { MaterialModule } from '../material/material.module';
     HomeRoutingModule,
     SharedModule,
     NgxChartsModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class HomeModule { }

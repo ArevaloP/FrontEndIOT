@@ -1,0 +1,31 @@
+.range{
+  width: auto;  
+  color: black;
+  float: left;
+}
+
+.tigger{
+  color: black;
+  float: right;
+  margin-top: -2.5em;
+}
+
+mat-label{
+  color: black;
+}
+
+mat-hint{
+  color: black;
+}
+
+.tile-gird{
+  padding: 1em;
+}
+
+.lis-grid{
+  margin-top: 0.5em;
+}
+
+.grid-title{
+  height: 20px;
+}
